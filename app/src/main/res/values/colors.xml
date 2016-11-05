@@ -6,4 +6,6 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorVermilion">#F0444C</color>
     <color name="colorBlue">#0000ff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorLightBlue">#9DCCE0</color>
 </resources>

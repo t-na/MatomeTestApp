@@ -8,18 +8,36 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityOne">
+        <activity android:name=".TitleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityTwo">
+        <activity android:name=".LoginActivity">
         </activity>
-        <activity android:name=".ActivityThree">
+        <activity android:name=".HomeActivity">
         </activity>
-        <activity android:name=".ActivityFour">
+        <activity android:name=".DetailActivity">
+        </activity>
+        <activity android:name=".MemberRegistrationActivity">
+        </activity>
+        <activity android:name=".AuthenticationMailActivity">
+        </activity>
+        <activity android:name=".PasswordForgettingActivity">
+        </activity>
+        <activity android:name=".ExhibitionRequestTutorialOneActivity">
+        </activity>
+        <activity android:name=".ExhibitionRequestTutorialTwoActivity">
+        </activity>
+        <activity android:name=".ExhibitionRequestTutorialThreeActivity">
+        </activity>
+        <activity android:name=".ExhibitionRequestTutorialFourActivity">
+        </activity>
+        <activity android:name=".ExhibitionRequestTutorialFiveActivity">
+        </activity>
+        <activity android:name=".ExhibitionRequestTutorialSixActivity">
         </activity>
     </application>
 

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/detail_activity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="jp.asahi.com.matometestapp.DetailActivity">
+
+    <include
+        layout="@layout/header_layout"
+        android:id="@+id/detail_activity_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/detail_activity_iamge"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/detail_activity_price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/colorVermilion"
+            android:textSize="32sp"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="96dp">
+
+        <TableRow
+            android:layout_width="96dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:background="@layout/table_frame"
+                android:text="カテゴリ"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@layout/table_frame"
+                android:text="バッグ > ショルダーバッグ"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="96dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:background="@layout/table_frame"
+                android:text="詳細"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@layout/table_frame"
+                android:text="ルイヴィトン・モノグラム・M45244"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="96dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:background="@layout/table_frame"
+                android:text="状態"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@layout/table_frame"
+                android:text="使用あり"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="96dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:background="@layout/table_frame"
+                android:text="備考"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@layout/table_frame"
+                android:text="2012年6月に購入"/>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="価格推移"
+        android:layout_gravity="center"
+        android:textSize="16sp"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/detail_activity_line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorVermilion"
+        android:onClick="onClick"
+        android:text="出品依頼"
+        android:textColor="@color/colorWhite"/>
+
+    <include
+        layout="@layout/tab_layout"
+        android:id="@+id/detail_activity_tab"/>
+
+</LinearLayout>

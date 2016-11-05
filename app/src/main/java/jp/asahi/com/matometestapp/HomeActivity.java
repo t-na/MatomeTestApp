@@ -2,9 +2,7 @@ package jp.asahi.com.matometestapp;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,65 +13,36 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class ActivityThree extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements TabClick {
+    public static final String EXTRA_ITEM_NUM = "jp.asahi.com.matometestapp.item_num";
+    public static final int TAG_KEY_OF_NUMBER_OF_VIEW = 314159265;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_three);
+        setContentView(R.layout.home_activity);
 
         ArrayList<Item> items = new ArrayList<>();
 
-        int images[] = {
-                R.drawable.monogram,
-                R.drawable.globe_master,
-                R.drawable.lambskin,
-                R.drawable.planet_ocean
-        };
 
-        String types[] = {
-            "バッグ",
-            "時計",
-            "バッグ",
-            "時計"
-        };
-
-        String brands[] = {
-            "ルイヴィトン",
-            "オメガ",
-            "シャネル",
-            "オメガ"
-        };
-
-        String texts[] = {
-            "モノグラム",
-            "グローブマスター",
-            "ラムスキン",
-            "プラネットオーシャン"
-        };
-
-        int prices[] = {
-            240000, 350000, -1, 300000
-        };
-
-        for(int i = 0; i < images.length; ++i) {
+        for (int i = 0; i < TopActivityItemList.images.length; ++i) {
             Item item = new Item();
 
-            item.setImage(images[i]);
-            item.setType(types[i]);
-            item.setBrand(brands[i]);
-            item.setText(texts[i]);
-            item.setPrice(prices[i]);
+            item.setImage(TopActivityItemList.images[i]);
+            item.setType(TopActivityItemList.types[i]);
+            item.setBrand(TopActivityItemList.brands[i]);
+            item.setText(TopActivityItemList.texts[i]);
+            item.setPrice(TopActivityItemList.prices[i]);
+            item.setNumber(i);
 
             items.add(item);
         }
 
         ItemAdapter adapter = new ItemAdapter(this, 0, items);
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = (ListView) findViewById(R.id.home_activity_list);
 
         listView.setAdapter(adapter);
 
@@ -85,20 +54,37 @@ public class ActivityThree extends AppCompatActivity {
                     int position,
                     long id
             ) {
-                TextView name = (TextView) view.findViewById(R.id.type);
-                Toast.makeText(
-                        ActivityThree.this,
-                        Integer.toString(position) + ":" + name.getText().toString(),
-                        Toast.LENGTH_SHORT
-                ).show();
                 onClick(view);
             }
         });
     }
 
     public void onClick(View v) {
-        Intent intent = new Intent(this, ActivityFour.class);
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra(EXTRA_ITEM_NUM, (int) v.getTag(TAG_KEY_OF_NUMBER_OF_VIEW));
         startActivity(intent);
+    }
+
+    @Override
+    public void OnClickTabButton(View v) {
+        Intent intent = null;
+        switch (v.getId()) {
+            case R.id.tab_layout_home:
+                intent = new Intent(this, HomeActivity.class);
+                break;
+            case R.id.tab_layout_registration:
+                intent = new Intent(this, HomeActivity.class);
+                break;
+            case R.id.tab_layout_notification:
+                intent = new Intent(this, HomeActivity.class);
+                break;
+            case R.id.tab_layout_setting:
+                intent = new Intent(this, HomeActivity.class);
+                break;
+        }
+        if (intent != null) {
+            startActivity(intent);
+        }
     }
 
     static class ViewHolder {
@@ -125,15 +111,15 @@ public class ActivityThree extends AppCompatActivity {
 
             if(convertView == null){
                 convertView = layoutInflater.inflate(
-                        R.layout.item_layout,
+                        R.layout.home_activity_item_layout,
                         parent,
                         false
                 );
-                holder.image = (ImageView) convertView.findViewById(R.id.image);
-                holder.type = (TextView) convertView.findViewById(R.id.type);
-                holder.brand = (TextView) convertView.findViewById(R.id.brand);
-                holder.text = (TextView) convertView.findViewById(R.id.text);
-                holder.price = (TextView) convertView.findViewById(R.id.price);
+                holder.image = (ImageView) convertView.findViewById(R.id.home_activity_item_layout_image);
+                holder.type = (TextView) convertView.findViewById(R.id.home_activity_item_layout_type);
+                holder.brand = (TextView) convertView.findViewById(R.id.home_activity_item_layout_brand);
+                holder.text = (TextView) convertView.findViewById(R.id.home_activity_item_layout_text);
+                holder.price = (TextView) convertView.findViewById(R.id.home_activity_item_layout_price);
                 convertView.setTag(holder);
             }else{
                 holder = (ViewHolder) convertView.getTag();
@@ -146,11 +132,31 @@ public class ActivityThree extends AppCompatActivity {
             holder.brand.setText(item.getBrand());
             holder.text.setText(item.getText());
             if(item.getPrice() != -1) {
-                holder.price.setText("￥"+item.getPrice());
+                String s = "";
+                int price = item.getPrice();
+                while (price > 0) {
+                    if (price < 1000) {
+                        s = price + s;
+                        price = 0;
+                    } else {
+                        if (price % 1000 == 0) {
+                            s = ",000" + s;
+                        } else if (price % 1000 < 10) {
+                            s = ",00" + price % 1000 + s;
+                        } else if (price % 1000 < 100) {
+                            s = ",0" + price % 1000 + s;
+                        } else {
+                            s = "," + price % 1000 + s;
+                        }
+                        price /= 1000;
+                    }
+                }
+                holder.price.setText("￥" + s);
             } else {
                 holder.price.setText("査定中");
                 holder.price.setTextColor(Color.rgb(0,0,255));
             }
+            convertView.setTag(TAG_KEY_OF_NUMBER_OF_VIEW, item.getNumber());
 
             return convertView;
         }
@@ -162,6 +168,7 @@ public class ActivityThree extends AppCompatActivity {
         private String brand;
         private String text;
         private int price;
+        private int number;
 
         public int getImage() {
             return image;
@@ -201,6 +208,14 @@ public class ActivityThree extends AppCompatActivity {
 
         public void setPrice(int price) {
             this.price = price;
+        }
+
+        public int getNumber() {
+            return number;
+        }
+
+        public void setNumber(int number) {
+            this.number = number;
         }
     }
 }
