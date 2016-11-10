@@ -7,34 +7,12 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
 
-public class ExhibitionRequestTutorialOneActivity extends AppCompatActivity implements TabClick {
+public class ExhibitionRequestTutorialOneActivity extends TabFooterActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exhibition_request_tutorial_one_activity);
-    }
-
-    @Override
-    public void OnClickTabButton(View v) {
-        Intent intent = null;
-        switch (v.getId()) {
-            case R.id.tab_layout_home:
-                intent = new Intent(this, HomeActivity.class);
-                break;
-            case R.id.tab_layout_registration:
-                intent = new Intent(this, HomeActivity.class);
-                break;
-            case R.id.tab_layout_notification:
-                intent = new Intent(this, HomeActivity.class);
-                break;
-            case R.id.tab_layout_setting:
-                intent = new Intent(this, HomeActivity.class);
-                break;
-        }
-        if (intent != null) {
-            startActivity(intent);
-        }
     }
 
     public void onClick(View v) {

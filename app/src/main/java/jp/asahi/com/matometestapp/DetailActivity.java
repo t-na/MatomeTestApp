@@ -21,7 +21,7 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 
-public class DetailActivity extends AppCompatActivity implements TabClick {
+public class DetailActivity extends TabFooterActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,28 +55,6 @@ public class DetailActivity extends AppCompatActivity implements TabClick {
             }
         }
         textView.setText("￥" + s);
-    }
-
-    @Override
-    public void OnClickTabButton(View v) {
-        Intent intent = null;
-        switch (v.getId()) {
-            case R.id.tab_layout_home:
-                intent = new Intent(this, HomeActivity.class);
-                break;
-            case R.id.tab_layout_registration:
-                intent = new Intent(this, HomeActivity.class);
-                break;
-            case R.id.tab_layout_notification:
-                intent = new Intent(this, HomeActivity.class);
-                break;
-            case R.id.tab_layout_setting:
-                intent = new Intent(this, HomeActivity.class);
-                break;
-        }
-        if (intent != null) {
-            startActivity(intent);
-        }
     }
 
     public void onClick(View v) {

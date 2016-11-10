@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class HomeActivity extends AppCompatActivity implements TabClick {
+public class HomeActivity extends TabFooterActivity {
     public static final String EXTRA_ITEM_NUM = "jp.asahi.com.matometestapp.item_num";
     public static final int TAG_KEY_OF_NUMBER_OF_VIEW = 314159265;
 
@@ -72,28 +72,6 @@ public class HomeActivity extends AppCompatActivity implements TabClick {
                 break;
         }
 
-        if (intent != null) {
-            startActivity(intent);
-        }
-    }
-
-    @Override
-    public void OnClickTabButton(View v) {
-        Intent intent = null;
-        switch (v.getId()) {
-            case R.id.tab_layout_home:
-                intent = new Intent(this, HomeActivity.class);
-                break;
-            case R.id.tab_layout_registration:
-                intent = new Intent(this, HomeActivity.class);
-                break;
-            case R.id.tab_layout_notification:
-                intent = new Intent(this, HomeActivity.class);
-                break;
-            case R.id.tab_layout_setting:
-                intent = new Intent(this, HomeActivity.class);
-                break;
-        }
         if (intent != null) {
             startActivity(intent);
         }

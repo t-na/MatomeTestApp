@@ -45,6 +45,20 @@
         </activity>
         <activity android:name=".TotalAssetsTransitionActivity">
         </activity>
+        <activity android:name=".SettingActivity">
+        </activity>
+        <activity android:name=".UserInformationActivity">
+        </activity>
+        <activity android:name=".AccountInformationActivity">
+        </activity>
+        <activity android:name=".IdentityCardActivity">
+        </activity>
+        <activity android:name=".MailAddressPasswordActivity">
+        </activity>
+        <activity android:name=".CollectionRequestActivity">
+        </activity>
+        <activity android:name=".HelpActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/setting_activity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="jp.asahi.com.matometestapp.SettingActivity">
+
+    <include layout="@layout/header_layout"/>
+
+    <TextView
+        android:id="@+id/setting_activity_user_information"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:background="@color/colorGray"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:text="ユーザ情報確認・登録"
+        android:textSize="24sp"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/setting_activity_account_information"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="1"
+        android:background="@color/colorGray"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:text="口座情報確認・登録"
+        android:textSize="24sp"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/setting_activity_identity_card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="1"
+        android:background="@color/colorGray"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:text="身分証確認・登録"
+        android:textSize="24sp"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/setting_activity_mail_address_password"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="1"
+        android:background="@color/colorGray"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:text="メールアドレス・パスワード変更"
+        android:textSize="24sp"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/setting_activity_collection_request"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="1"
+        android:background="@color/colorGray"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:text="集荷依頼"
+        android:textSize="24sp"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/setting_activity_help"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="1"
+        android:background="@color/colorGray"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:text="ヘルプ・その他"
+        android:textSize="24sp"
+        android:onClick="onClick"/>
+
+    <include layout="@layout/tab_layout"/>
+
+</LinearLayout>
