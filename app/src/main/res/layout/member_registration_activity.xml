@@ -8,9 +8,7 @@
     android:orientation="vertical"
     tools:context="jp.asahi.com.matometestapp.MemberRegistrationActivity">
 
-    <include
-        layout="@layout/header_layout"
-        android:id="@+id/member_registration_activity_header"/>
+    <include layout="@layout/header_layout"/>
 
     <TextView
         android:layout_width="wrap_content"

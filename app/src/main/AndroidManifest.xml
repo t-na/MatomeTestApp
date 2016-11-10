@@ -39,6 +39,12 @@
         </activity>
         <activity android:name=".ExhibitionRequestTutorialSixActivity">
         </activity>
+        <activity android:name=".ExhibitionRequestNoRegistrationActivity">
+        </activity>
+        <activity android:name=".DeliveryKitRequestActivity">
+        </activity>
+        <activity android:name=".TotalAssetsTransitionActivity">
+        </activity>
     </application>
 
 </manifest>

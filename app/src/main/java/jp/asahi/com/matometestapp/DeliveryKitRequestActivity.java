@@ -3,16 +3,14 @@ package jp.asahi.com.matometestapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.LinearLayout;
 
-public class ExhibitionRequestTutorialOneActivity extends AppCompatActivity implements TabClick {
+public class DeliveryKitRequestActivity extends AppCompatActivity implements TabClick {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.exhibition_request_tutorial_one_activity);
+        setContentView(R.layout.delivery_kit_request_activity);
     }
 
     @Override
@@ -40,11 +38,11 @@ public class ExhibitionRequestTutorialOneActivity extends AppCompatActivity impl
     public void onClick(View v) {
         Intent intent = null;
         switch (v.getId()) {
-            case R.id.exhibition_request_tutorial_one_activity_cross:
-                intent = new Intent(this, DeliveryKitRequestActivity.class);
+            case R.id.delivery_kit_request_activity_send_button:
+                intent = new Intent(this, HomeActivity.class);
                 break;
-            case R.id.exhibition_request_tutorial_one_activity_button:
-                intent = new Intent(this, ExhibitionRequestTutorialTwoActivity.class);
+            case R.id.delivery_kit_request_activity_size_button:
+                intent = null;
                 break;
         }
 

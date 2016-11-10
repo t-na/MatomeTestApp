@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">MatomeTestApp</string>
+    <array name="delivery_kit_request_activity_arrival_date">
+        <item>指定なし(最短配送)</item>
+        <item>明日(hoge日)</item>
+        <item>明後日(piko日)</item>
+    </array>
+    <array name="delivery_kit_request_activity_arrival_time">
+        <item>指定なし</item>
+        <item>午前中</item>
+        <item>12～14時</item>
+        <item>14～16時</item>
+        <item>16～18時</item>
+        <item>18～20時</item>
+    </array>
+    <array name="delivery_kit_request_activity_cardboard">
+        <item>選択</item>
+        <item>1個</item>
+        <item>2個</item>
+        <item>3個</item>
+        <item>4個</item>
+        <item>5個</item>
+    </array>
 </resources>

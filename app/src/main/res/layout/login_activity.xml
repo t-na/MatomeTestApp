@@ -9,9 +9,7 @@
     android:orientation="vertical"
     tools:context="jp.asahi.com.matometestapp.LoginActivity">
 
-    <include
-        android:id="@+id/login_activity_header"
-        layout="@layout/header_layout"/>
+    <include layout="@layout/header_layout"/>
 
     <TextView
         android:layout_width="wrap_content"

@@ -5,14 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     android:orientation="vertical"
     tools:context="jp.asahi.com.matometestapp.ExhibitionRequestTutorialFiveActivity">
 
-    <include
-        android:id="@+id/exhibition_request_tutorial_one_activity_header"
-        layout="@layout/header_layout"/>
+    <include layout="@layout/header_layout"/>
 
     <TextView
+        android:id="@+id/exhibition_request_tutorial_five_activity_cross"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
@@ -25,27 +26,31 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="64dp"
-        android:layout_marginRight="64dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
         android:orientation="horizontal">
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:src="@drawable/blue_step5"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="-20dp"
             android:gravity="center"
-            android:text="商品到着・査定・連絡"
+            android:text="商品到着・\n査定・連絡"
             android:textSize="32sp"/>
     </LinearLayout>
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="128dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:src="@drawable/blue_step5_image"/>
@@ -56,10 +61,11 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:text="商品が弊社に届き次第、\n鑑定士が正確に査定し、\nアプリ内通知・メール・お電話にて\n査定結果をお伝えします。"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:textAlignment="center"/>
 
     <Button
-        android:id="@+id/login_activity_login_button"
+        android:id="@+id/exhibition_request_tutorial_five_activity_button"
         android:layout_width="128dp"
         android:layout_height="32dp"
         android:layout_gravity="center"
@@ -71,15 +77,12 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="8dp"
         android:text="○○○○●○"
         android:textSize="60sp"/>
 
-    <include
-        android:id="@+id/exhibition_request_tutorial_one_activity_tab"
-        layout="@layout/tab_layout"/>
+    <include layout="@layout/tab_layout"/>
 
 </LinearLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/delivery_kit_request_activity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="jp.asahi.com.matometestapp.DeliveryKitRequestActivity">
+
+    <include layout="@layout/header_layout"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="宅配キット依頼"
+        android:textColor="@color/colorLightBlue"
+        android:textSize="24sp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="@color/colorGray">
+
+        <TableRow
+            android:layout_margin="2dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:background="@color/colorOcher"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="段ボール箱の\n大きさ"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="※必須"
+                    android:textColor="@color/colorVermilion"/>
+
+                <Button
+                    android:id="@+id/delivery_kit_request_activity_size_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:text="サイズ詳細"/>
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="3"
+                android:background="@color/colorWhite"
+                android:gravity="center">
+
+                <TableRow
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_marginLeft="4dp"
+                        android:text="小サイズ"
+                        android:textSize="20sp"/>
+
+                    <Spinner
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:entries="@array/delivery_kit_request_activity_cardboard"
+                        android:spinnerMode="dropdown"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_marginLeft="4dp"
+                        android:text="中サイズ"
+                        android:textSize="20sp"/>
+
+                    <Spinner
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:entries="@array/delivery_kit_request_activity_cardboard"
+                        android:spinnerMode="dropdown"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_marginLeft="4dp"
+                        android:text="大サイズ"
+                        android:textSize="20sp"/>
+
+                    <Spinner
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:entries="@array/delivery_kit_request_activity_cardboard"
+                        android:spinnerMode="dropdown"/>
+                </TableRow>
+            </TableLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@color/colorOcher"
+                android:gravity="center"
+                android:text="到着時間帯指定"/>
+
+            <FrameLayout
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorWhite">
+
+                <Spinner
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:entries="@array/delivery_kit_request_activity_arrival_time"
+                    android:spinnerMode="dropdown"/>
+            </FrameLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@color/colorOcher"
+                android:gravity="center"
+                android:text="到着日指定\n(2営業日以内)"
+                android:textAlignment="center"/>
+
+            <FrameLayout
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorWhite">
+
+                <Spinner
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:entries="@array/delivery_kit_request_activity_arrival_date"
+                    android:spinnerMode="dropdown"/>
+            </FrameLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/colorOcher"
+                android:gravity="center"
+                android:text="備考"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:paddingLeft="4dp"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:text="　利用規約と個人情報保護方針に同意する"/>
+
+    <Button
+        android:id="@+id/delivery_kit_request_activity_send_button"
+        android:layout_width="128dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorVermilion"
+        android:onClick="onClick"
+        android:text="送信"
+        android:textColor="@color/colorWhite"/>
+
+    <include layout="@layout/tab_layout"/>
+
+</LinearLayout>

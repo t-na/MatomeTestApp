@@ -8,11 +8,10 @@
     android:orientation="vertical"
     tools:context="jp.asahi.com.matometestapp.ExhibitionRequestTutorialTwoActivity">
 
-    <include
-        android:id="@+id/exhibition_request_tutorial_one_activity_header"
-        layout="@layout/header_layout"/>
+    <include layout="@layout/header_layout"/>
 
     <TextView
+        android:id="@+id/exhibition_request_tutorial_two_activity_cross"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
@@ -25,8 +24,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="64dp"
-        android:layout_marginRight="64dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -38,6 +37,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginLeft="4dp"
             android:gravity="center"
             android:text="宅配キット申し込み"
             android:textSize="24sp"/>
@@ -45,7 +45,8 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="128dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:src="@drawable/blue_step1_image"/>
@@ -56,10 +57,11 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:text="委託出品するために\n「宅配キット申し込みフォーラム」から、\n申し込んでください。"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:textAlignment="center"/>
 
     <Button
-        android:id="@+id/login_activity_login_button"
+        android:id="@+id/exhibition_request_tutorial_two_activity_button"
         android:layout_width="128dp"
         android:layout_height="32dp"
         android:layout_gravity="center"
@@ -71,15 +73,12 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="8dp"
         android:text="○●○○○○"
         android:textSize="60sp"/>
 
-    <include
-        android:id="@+id/exhibition_request_tutorial_one_activity_tab"
-        layout="@layout/tab_layout"/>
+    <include layout="@layout/tab_layout"/>
 
 </LinearLayout>

@@ -54,15 +54,27 @@ public class HomeActivity extends AppCompatActivity implements TabClick {
                     int position,
                     long id
             ) {
+                view.setId(R.id.home_activity_list);
                 onClick(view);
             }
         });
     }
 
     public void onClick(View v) {
-        Intent intent = new Intent(this, DetailActivity.class);
-        intent.putExtra(EXTRA_ITEM_NUM, (int) v.getTag(TAG_KEY_OF_NUMBER_OF_VIEW));
-        startActivity(intent);
+        Intent intent = null;
+        switch (v.getId()) {
+            case R.id.home_activity_list:
+                intent = new Intent(this, DetailActivity.class);
+                intent.putExtra(EXTRA_ITEM_NUM, (int) v.getTag(TAG_KEY_OF_NUMBER_OF_VIEW));
+                break;
+            case R.id.home_activity_total_assets:
+                intent = new Intent(this, TotalAssetsTransitionActivity.class);
+                break;
+        }
+
+        if (intent != null) {
+            startActivity(intent);
+        }
     }
 
     @Override

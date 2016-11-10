@@ -5,24 +5,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorWhite"
+    android:orientation="vertical"
     tools:context="jp.asahi.com.matometestapp.HomeActivity">
 
-    <include
-        layout="@layout/header_layout"
-        android:id="@+id/home_activity_header"/>
+    <include layout="@layout/header_layout"/>
 
     <LinearLayout
+        android:id="@+id/home_activity_total_assets"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onClick"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
             android:text="資産総額"
             android:textColor="@color/colorBlue"
             android:textSize="28sp"/>
@@ -30,8 +31,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
             android:layout_marginRight="40dp"
+            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
             <TextView
@@ -66,7 +67,5 @@
         android:layout_height="0dp"
         android:layout_weight="1"/>
 
-    <include
-        layout="@layout/tab_layout"
-        android:id="@+id/home_activity_tab"/>
+    <include layout="@layout/tab_layout"/>
 </LinearLayout>
