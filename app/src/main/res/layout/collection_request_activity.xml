@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     android:id="@+id/collection_request_activity"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="jp.asahi.com.matometestapp.CollectionRequestActivity">
 
-</RelativeLayout>
+    <include layout="@layout/header_layout"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="集荷依頼"
+        android:textColor="@color/colorLightBlue"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:text="集荷依頼する運送業者を\n選んでください。\n直接電話がつながります。"
+        android:textSize="20sp"
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:id="@+id/collection_request_activity_yamato"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:onClick="onClick"
+        android:src="@drawable/step3_05"/>
+
+    <ImageView
+        android:id="@+id/collection_request_activity_sagawa"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:onClick="onClick"
+        android:src="@drawable/step3_03"/>
+
+    <ImageView
+        android:id="@+id/collection_request_activity_yuupack"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:onClick="onClick"
+        android:src="@drawable/step3_06"/>
+
+    <View
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"/>
+
+    <include layout="@layout/tab_layout"/>
+</LinearLayout>
