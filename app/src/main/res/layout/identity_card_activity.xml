@@ -71,7 +71,8 @@
                     android:layout_gravity="center"
                     android:layout_margin="4dp"
                     android:onClick="onClick"
-                    android:text="画像を選択"/>
+                    android:text="画像を選択"
+                    android:elevation="0dp"/>
             </FrameLayout>
         </TableRow>
 
