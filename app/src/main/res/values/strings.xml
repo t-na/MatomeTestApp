@@ -21,4 +21,19 @@
         <item>4個</item>
         <item>5個</item>
     </array>
+    <array name="account_information_activity_bank">
+        <item>選択</item>
+        <item>ゆうちょ銀行</item>
+        <item>UFJ</item>
+        <item>hoge</item>
+        <item>piko</item>
+        <item>fuga</item>
+    </array>
+    <array name="account_information_activity_type">
+        <item>選択</item>
+        <item>普通預金</item>
+        <item>hoge</item>
+        <item>piko</item>
+        <item>fuga</item>
+    </array>
 </resources>

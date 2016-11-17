@@ -1,31 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:id="@+id/help_activity"
+    android:id="@+id/mail_address_authentication_activity"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="jp.asahi.com.matometestapp.HelpActivity">
+    tools:context="jp.asahi.com.matometestapp.MailAddressAuthenticationActivity">
 
     <include layout="@layout/header_layout"/>
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:text="ヘルプ・その他"
-        android:textColor="@color/colorLightBlue"
-        android:textSize="24sp"/>
-
-    <TextView
-        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:text="？"
-        android:textSize="48sp"/>
+        android:layout_weight="1"
+        android:text="ご登録いただきました\n新しいメールアドレスに\n認証メールを送信しましたので\nご確認をお願いします。"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
 
     <include layout="@layout/tab_layout"/>
+
 </LinearLayout>

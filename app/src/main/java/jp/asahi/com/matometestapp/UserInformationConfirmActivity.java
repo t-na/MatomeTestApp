@@ -5,16 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class AccountInformationActivity extends TabFooterActivity {
+public class UserInformationConfirmActivity extends TabFooterActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.account_information_activity);
+        setContentView(R.layout.user_information_confirm_activity);
     }
 
     public void onClick(View v) {
-        Intent intent = new Intent(this, AccountInformationConfirmActivity.class);
+        Intent intent = new Intent(this, UserInformationActivity.class);
         startActivity(intent);
     }
 }

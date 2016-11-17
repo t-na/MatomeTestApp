@@ -201,6 +201,7 @@
                 android:layout_marginLeft="2dp"
                 android:layout_weight="1"
                 android:background="@color/colorWhite"
+                android:gravity="top|left"
                 android:paddingLeft="4dp"/>
         </TableRow>
 

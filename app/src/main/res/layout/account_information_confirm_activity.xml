@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:id="@+id/account_information_activity"
+    android:id="@+id/account_information_confirm_activity"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="jp.asahi.com.matometestapp.AccountInformationActivity">
+    tools:context="jp.asahi.com.matometestapp.AccountInformationConfirmActivity">
 
     <include layout="@layout/header_layout"/>
 
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:text="振込先口座の登録"
+        android:text="振込先口座の確認・変更"
         android:textColor="@color/colorLightBlue"
         android:textSize="24sp"/>
 
@@ -37,19 +37,15 @@
                 android:gravity="center"
                 android:text="銀行"/>
 
-            <FrameLayout
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="1"
-                android:background="@color/colorWhite">
-
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:entries="@array/account_information_activity_bank"
-                    android:spinnerMode="dropdown"></Spinner>
-            </FrameLayout>
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="ゆうちょ銀行"
+                android:textSize="20sp"/>
         </TableRow>
 
         <TableRow
@@ -65,19 +61,15 @@
                 android:gravity="center"
                 android:text="口座種別"/>
 
-            <FrameLayout
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="1"
-                android:background="@color/colorWhite">
-
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:entries="@array/account_information_activity_type"
-                    android:spinnerMode="dropdown"></Spinner>
-            </FrameLayout>
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="普通預金"
+                android:textSize="20sp"/>
         </TableRow>
 
         <TableRow
@@ -93,19 +85,15 @@
                 android:gravity="center"
                 android:text="支店コード"/>
 
-            <FrameLayout
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="1"
-                android:background="@color/colorWhite">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:background="@layout/edit_text_frame"/>
-            </FrameLayout>
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="xxx"
+                android:textSize="20sp"/>
         </TableRow>
 
         <TableRow
@@ -121,19 +109,15 @@
                 android:gravity="center"
                 android:text="口座番号"/>
 
-            <FrameLayout
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="1"
-                android:background="@color/colorWhite">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:background="@layout/edit_text_frame"/>
-            </FrameLayout>
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="xxxxxx"
+                android:textSize="20sp"/>
         </TableRow>
 
         <TableRow
@@ -149,19 +133,15 @@
                 android:gravity="center"
                 android:text="口座名義(セイ)"/>
 
-            <FrameLayout
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="1"
-                android:background="@color/colorWhite">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:background="@layout/edit_text_frame"/>
-            </FrameLayout>
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="ヤマダ"
+                android:textSize="20sp"/>
         </TableRow>
 
         <TableRow
@@ -177,31 +157,20 @@
                 android:gravity="center"
                 android:text="口座名義(名)"/>
 
-            <FrameLayout
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="1"
-                android:background="@color/colorWhite">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:background="@layout/edit_text_frame"/>
-            </FrameLayout>
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="タロウ"
+                android:textSize="20sp"/>
         </TableRow>
     </TableLayout>
 
-    <CheckBox
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:text="　利用規約と個人情報保護方針に同意する"/>
-
     <Button
-        android:id="@+id/account_information_activity_button"
+        android:id="@+id/account_information_confirm_activity_button"
         android:layout_width="128dp"
         android:layout_height="32dp"
         android:layout_gravity="center"
@@ -209,7 +178,7 @@
         android:layout_marginTop="8dp"
         android:background="@color/colorVermilion"
         android:onClick="onClick"
-        android:text="登録"
+        android:text="変更"
         android:textColor="@color/colorWhite"/>
 
     <include layout="@layout/tab_layout"/>

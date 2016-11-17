@@ -31,7 +31,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/blue_step3"/>
+            android:src="@drawable/blue_step4"/>
 
         <TextView
             android:layout_width="0dp"
@@ -49,7 +49,7 @@
         android:layout_weight="1"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:src="@drawable/blue_step5_image"/>
+        android:src="@drawable/blue_step_image"/>
 
     <TextView
         android:layout_width="wrap_content"

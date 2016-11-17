@@ -5,13 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/colorGray"
     android:orientation="horizontal">
 
     <LinearLayout
         android:id="@+id/tab_layout_home"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
         android:layout_weight="1"
+        android:background="@color/colorWhite"
         android:clickable="true"
         android:onClick="OnClickTabButton"
         android:orientation="vertical"
@@ -33,7 +36,10 @@
         android:id="@+id/tab_layout_registration"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
         android:layout_weight="1"
+        android:background="@color/colorWhite"
         android:clickable="true"
         android:onClick="OnClickTabButton"
         android:orientation="vertical">
@@ -54,7 +60,10 @@
         android:id="@+id/tab_layout_notification"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
         android:layout_weight="1"
+        android:background="@color/colorWhite"
         android:clickable="true"
         android:onClick="OnClickTabButton"
         android:orientation="vertical">
@@ -75,7 +84,10 @@
         android:id="@+id/tab_layout_setting"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
         android:layout_weight="1"
+        android:background="@color/colorWhite"
         android:clickable="true"
         android:onClick="OnClickTabButton"
         android:orientation="vertical">
