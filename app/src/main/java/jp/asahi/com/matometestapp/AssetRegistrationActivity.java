@@ -13,6 +13,14 @@ public class AssetRegistrationActivity extends ImageUploadActivity {
         setContentView(R.layout.asset_registration_activity);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        ImageView imageView = (ImageView) findViewById(R.id.delivery_kit_request_activity);
+        imageView.setImageBitmap(getBitMap());
+    }
+
     public void submitData(View v) {
         Intent intent = new Intent(this, AssetRegistrationConfirmActivity.class);
         startActivity(intent);
