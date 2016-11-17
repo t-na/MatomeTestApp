@@ -3,6 +3,7 @@ package jp.asahi.com.matometestapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 public class AssetRegistrationActivity extends ImageUploadActivity {
@@ -11,6 +12,7 @@ public class AssetRegistrationActivity extends ImageUploadActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.asset_registration_activity);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
     @Override
