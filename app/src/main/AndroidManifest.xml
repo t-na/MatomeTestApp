@@ -79,6 +79,10 @@
         </activity>
         <activity android:name=".MailAddressAuthenticationActivity">
         </activity>
+        <activity android:name=".AssetRegistrationActivity">
+        </activity>
+        <activity android:name=".AssetRegistrationConfirmActivity">
+        </activity>
     </application>
 
 </manifest>
