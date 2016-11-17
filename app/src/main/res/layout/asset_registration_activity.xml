@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/asset_registration_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="資産情報登録"
+                android:textColor="@color/colorLightBlue"
+                android:textSize="24sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="メイン写真" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:text="ファイルを選択" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="サブ1" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:text="ファイルを選択" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="サブ2" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:text="ファイルを選択" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="サブ3" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:text="ファイルを選択" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="カテゴリ" />
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="2"
+                        android:entries="@array/asset_registration_activity_category" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="詳細(ブランド名・モデル名・型番など)" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:hint="オメガ"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="状態" />
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="2"
+                        android:entries="@array/asset_registration_activity_status" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="備考" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:hint="去年もらったやつです"
+                        android:inputType="text" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="登録" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/tab_layout" />
+
+</LinearLayout>

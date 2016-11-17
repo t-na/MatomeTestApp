@@ -36,4 +36,12 @@
         <item>piko</item>
         <item>fuga</item>
     </array>
+    <array name="asset_registration_activity_category">
+        <item>選択</item>
+        <item>時計</item>
+    </array>
+    <array name="asset_registration_activity_status">
+        <item>選択</item>
+        <item>きれい</item>
+    </array>
 </resources>

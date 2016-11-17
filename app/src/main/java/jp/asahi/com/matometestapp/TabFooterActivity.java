@@ -12,7 +12,7 @@ public class TabFooterActivity extends AppCompatActivity {
                 intent = new Intent(this, HomeActivity.class);
                 break;
             case R.id.tab_layout_registration:
-                intent = new Intent(this, HomeActivity.class);
+                intent = new Intent(this, AssetRegistrationActivity.class);
                 break;
             case R.id.tab_layout_notification:
                 intent = new Intent(this, HomeActivity.class);
