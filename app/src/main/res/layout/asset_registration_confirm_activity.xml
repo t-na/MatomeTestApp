@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:onClick="endAssetRegistrationConfirm"
             android:text="新しい資産を登録する" />
 
     </RelativeLayout>

@@ -12,4 +12,9 @@ public class AssetRegistrationActivity extends ImageUploadActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.asset_registration_activity);
     }
+
+    public void submitData(View v) {
+        Intent intent = new Intent(this, AssetRegistrationConfirmActivity.class);
+        startActivity(intent);
+    }
 }

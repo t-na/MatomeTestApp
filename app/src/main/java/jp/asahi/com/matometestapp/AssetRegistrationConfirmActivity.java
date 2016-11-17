@@ -11,4 +11,9 @@ public class AssetRegistrationConfirmActivity extends TabFooterActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.asset_registration_confirm_activity);
     }
+
+    public void endAssetRegistrationConfirm(View v) {
+        Intent intent = new Intent(this, AssetRegistrationActivity.class);
+        startActivity(intent);
+    }
 }
